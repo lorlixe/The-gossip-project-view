@@ -1,0 +1,17 @@
+<html>
+  <body>
+
+  <h1>Bienvenue sur la page des Gossips !</h1>
+
+  <p>Ici, tu vas pouvoir écrire ce qui te passe par la tête, de manière anonyme.</p> 
+
+    <%= form_tag "/gossips", method: "post" do %>
+    <p>Ton psedo secret:</p>
+    <p><input type="text" name="author" /></p>
+    <p>Ton gossip :</p>
+    <textarea id="message" name="content" cols="24" rows="4">Rentre ton gossip ici</textarea><br/>
+    <input type="submit" value="Ajouter un gossip" />
+   <% end %>
+
+  </body>
+</html>

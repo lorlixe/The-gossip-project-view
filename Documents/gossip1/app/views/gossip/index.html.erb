@@ -1,0 +1,32 @@
+<link href="jumbotron.css" rel="stylesheet">
+  </head>
+  <body>
+
+<main role="main">
+  <img class="bg-image opacity-40" title="image : gossip" src="app/views/gossip/gossip.png">
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-3">Gossip project</h1>
+      <h3 class="display-5">Bienvenu </h3>
+      <p>Tout ce qui est écrit continue de vivre ; tout ce qui n'est que parler meurt :
+      Proverbe oriental(1876)</p>
+      <p><a class="btn btn-primary btn-lg" href="/gossip/new" role="button"> Nouveau gossip</a></p>
+    </div>
+  </div>
+
+<div class="card-columns">
+	<% Gossip.all.each do |i|%>
+
+
+<div class="card">
+  
+  <div class="card-body">
+    <h5 class="card-title"><%= i.title %></h5>
+    <p class="card-text"><%= i.content %></p>
+    <a href= gossip/<%=i.id%> class="btn btn-primary">Voir plus</a>
+  </div>
+</div>
+  <% end %>
+
+  
