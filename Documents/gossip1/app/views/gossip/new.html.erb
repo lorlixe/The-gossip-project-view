@@ -5,10 +5,11 @@
 
   <p>Ici, tu vas pouvoir écrire ce qui te passe par la tête, de manière anonyme.</p> 
 
-    <%= form_tag "/gossips", method: "post" do %>
-    <p>Ton psedo secret:</p>
-    <p><input type="text" name="author" /></p>
-    <p>Ton gossip :</p>
+    <%= form_tag "/gossip", method: "post" do %>
+    <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+    <%= label_tag 'title'%></p>
+    <p><input type="text" name="title" /></p>
+    <%= label_tag 'content'%></p>
     <textarea id="message" name="content" cols="24" rows="4">Rentre ton gossip ici</textarea><br/>
     <input type="submit" value="Ajouter un gossip" />
    <% end %>

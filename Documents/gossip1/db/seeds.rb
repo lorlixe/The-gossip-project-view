@@ -14,7 +14,7 @@ User.destroy_all
 10.times do
     user = User.create(first_name: Faker::Name.first_name, 
     last_name: Faker::Name.last_name, 
-    # description: Faker::GameOfThrones.quote, 
+    description: Faker::JapaneseMedia::OnePiece.quote, 
     email: Faker::Internet.email, 
       age: rand(15..99))
 end

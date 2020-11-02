@@ -1,0 +1,11 @@
+<div class="jumbotron">
+<div class="container">
+  <h1 class="display-3">Gossip project</h1>
+  <h3 class="display-5">Gossip n° <%= @gossip.id %> </h3>
+  <h5 class="card-title"><%= @gossip.title %></h5>
+  <h5 class="card-title"><%= @gossip.content %></h5>
+
+  <a href= /user/<%= @gossip.user.id%>/edit class="btn btn-primary">Author : <%= @gossip.user.first_name %> </a>
+
+</div>
+</div>
